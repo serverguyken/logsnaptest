@@ -82,5 +82,5 @@ create.addEventListener('click', function () {
             });
         });
     }
-    postRecords("http://localhost:3000/logsnap/api/createdns");
+    postRecords("https://logsnap-api.onrender.com/logsnap/api/createdns");
 });
