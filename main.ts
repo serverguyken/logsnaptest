@@ -14,11 +14,11 @@ window.onload = function () {
 
 const createdRecord = {
     type: "CNAME",
-    name: "echodesk",
-    content: "logsnap.neltify.app",
+    name: "linearx",
+    content: "logsnap.netlify.app",
     ttl: 120,
     proxied: true,
-    domain_alias: 'echodesk.logsnap.site'
+    domain_alias: 'linearx.logsnap.site'
 }
 
 create.addEventListener('click', () => {
@@ -37,11 +37,11 @@ create.addEventListener('click', () => {
         .then(() => {
             setTimeout(function() {
                 location.href = `https://${createdRecord.name}.logsnap.site/`
-            },1000)
+            },5000)
         })
         .catch(error => {
             console.log(error);
         })
     }
-    postRecords("http://localhost:3000/logsnap/api/createdns")
+    postRecords("https://logsnap-api.onrender.com/logsnap/api/createdns")
 })

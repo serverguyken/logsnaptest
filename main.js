@@ -44,11 +44,11 @@ window.onload = function () {
 };
 var createdRecord = {
     type: "CNAME",
-    name: "echodesk",
-    content: "logsnap.neltify.app",
+    name: "linearx",
+    content: "logsnap.netlify.app",
     ttl: 120,
     proxied: true,
-    domain_alias: 'echodesk.logsnap.site'
+    domain_alias: 'linearx.logsnap.site'
 };
 create.addEventListener('click', function () {
     function postRecords(url) {
@@ -73,7 +73,7 @@ create.addEventListener('click', function () {
                             .then(function () {
                             setTimeout(function () {
                                 location.href = "https://" + createdRecord.name + ".logsnap.site/";
-                            }, 1000);
+                            }, 5000);
                         })["catch"](function (error) {
                             console.log(error);
                         });
